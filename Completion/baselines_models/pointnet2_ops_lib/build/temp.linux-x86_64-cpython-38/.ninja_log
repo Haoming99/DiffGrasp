@@ -1,0 +1,10 @@
+# ninja log v5
+0	14125	1717717019436907722	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/ball_query.o	5e5b0b8d0c6ab573
+0	14287	1717717019596909749	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/sampling.o	21a1079d7059234d
+1	14920	1717717020228917754	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/group_points.o	32c295ad2d8d1343
+0	17225	1717717022532946939	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/bindings.o	a01f1df8d730d5ee
+1	17281	1717717022592947699	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/interpolate.o	ece013b2ddb9bf
+0	27665	1717717032977079247	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/ball_query_gpu.o	4de73a8d85a23ed3
+1	28377	1717717033685088217	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/group_points_gpu.o	1e7040cfa17641c4
+1	28403	1717717033713088571	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/interpolate_gpu.o	9d206d98a27c6903
+1	31415	1717717036725126732	/home/haoming/Downloads/3DSGrasp-master/Completion/models/pointnet2_ops_lib/build/temp.linux-x86_64-cpython-38/pointnet2_ops/_ext-src/src/sampling_gpu.o	9f5a774116c1e0f3

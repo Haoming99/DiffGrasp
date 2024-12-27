@@ -1,0 +1,20 @@
+optimizer : {
+  type: Adam,
+  kwargs: {
+  lr : 0.0001,
+  weight_decay : 0
+}}
+scheduler: {
+  type: StepLR,
+  kwargs: {
+  step_size: 50,
+  gamma : 0.5
+}}
+
+model : {
+  NAME: PCN, num_pred: 8192, encoder_channel: 1024}
+total_bs : 32  
+step_per_update : 1
+max_epoch : 150
+
+consider_metric: CDL2

@@ -1,0 +1,8 @@
+# ninja log v5
+0	101	1722726743780744350	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libmcubes/marchingcubes.o	742000f1b37708a2
+0	618	1722726744300751341	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libmcubes/pywrapper.o	c8bf70a8d531be82
+0	1187	1722726744868758977	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libmcubes/mcubes.o	de59be11a49bae0e
+0	3060	1722726748052801794	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libmesh/triangle_hash.o	d7f49af22791359b
+0	3600	1722726751768851784	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libmise/mise.o	11b8a92c2b1ed8c2
+0	3595	1722726755500902009	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libsimplify/simplify_mesh.o	860b2cbcb1ae5b7d
+0	2483	1722726758176938034	/home/haoming/Downloads/3DSGrasp-master/Completion/Wen/build/temp.linux-x86_64-cpython-39/libs/libvoxelize/voxelize.o	d6a123befe71a539
