@@ -2,7 +2,8 @@
 
 ## Environment setup
 **Commands for creating an environment and further setup**:
-```cd 3DSGrasp-master
+```bash
+        cd DiffGrasp
 	conda env create -f diffgrasp.yaml
 	conda activate diffgrasp
 	cd Completion/extensions/chamfer_dist/
@@ -103,4 +104,15 @@ To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow the
     source catkin_workspace/devel/setup.bash
     roslaunch kortex_examples reach_approach_grasp_pose.launch
     ```
+
+## Train the diffusion model on YCB and ShapeNet
+**Train the diffusion model**:
+```bash
+     python3 /Completion/diff_models/main_diffusion3xc_all.py
+```
+
+** Mesh Generation using the diffusion model **
+```bash
+     python3 /Completion/diff_models/main_mesh_generation.py
+```
 
