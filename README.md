@@ -1,4 +1,4 @@
-# 3DSGrasp Manual
+# DiffGrasp Manual
 
 ## Full Pipeline for Kinova Gen3 Grasping in Real World
 
