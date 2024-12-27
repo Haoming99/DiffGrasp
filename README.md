@@ -1,5 +1,23 @@
 # DiffGrasp Manual
 
+## Environment setup
+**Commands for creating an environment and further setup**:
+```cd 3DSGrasp-master
+	conda env create -f diffgrasp.yaml
+	conda activate diffgrasp
+	cd Completion/extensions/chamfer_dist/
+	pip install .
+	cd ../..
+	cd models/pointnet2_ops_lib
+	pip install .
+	pip install timm
+	pip install tensorboardX
+	pip install easydict
+	pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
+```
+
+
+
 ## Full Pipeline for Kinova Gen3 Grasping in Real World
 
 1. **Kortex Driver**:
