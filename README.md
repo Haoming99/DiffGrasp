@@ -1,5 +1,5 @@
 # DiffGrasp Manual
-This repository contains the implementation of our paper DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping. Our code is based on the baseline algorithm DeFRCN.
+This repository contains the implementation of our paper DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping. 
 
 The methods of our paper are mainly implemented in DiffGrasp/Completion/diff_models.
 
@@ -109,7 +109,7 @@ To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow the
     roslaunch kortex_examples reach_approach_grasp_pose.launch
     ```
 
-## Train the diffusion model on YCB and ShapeNet
+## Train and Evaluate the Diffusion Model on the YCB and ShapeNet Dataset
 **Train the diffusion model**:
 ```bash
      python3 /Completion/diff_models/main_diffusion3xc_all.py
