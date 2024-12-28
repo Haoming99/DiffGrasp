@@ -48,7 +48,7 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
 
 ## Implementation of Real-world Grasping using Kinova Gen3 
 
-Open four separate terminals and enter the commands below. The partial, complete point clouds, and the generated grasp poses will be stored in `DiffGrasp/tmp_data`.
+Open four separate terminals and enter the commands below. The partial, complete point clouds, meshes, and the generated grasp poses will be stored in `DiffGrasp/tmp_data`.
 
 1. **Kortex Driver**:
     ```bash
