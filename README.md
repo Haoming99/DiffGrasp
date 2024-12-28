@@ -5,6 +5,8 @@ The codes of our shape completion method are mainly in `DiffGrasp/Completion/dif
 
 The codes of robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff_.py` and `DiffGrasp/main_gpd_diff_gazebo.py`
 
+Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](https://github.com/yuxumin/PoinTr/tree/master), [PoinTr](https://github.com/yuxumin/PoinTr/tree/master), [3DSGrasp](https://github.com/NunoDuarte/3DSGrasp), [EINet](https://github.com/corecai163/EINet).
+
 ---
 
 ## Requirements
