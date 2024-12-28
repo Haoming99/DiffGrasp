@@ -17,6 +17,10 @@ The codes of robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff
 - timm
 - open3d
 - tensorboardX
+- MoveIt!
+- ROS
+- GPD
+- PCL
 
 
 ## Environment setup
