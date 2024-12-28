@@ -1,4 +1,4 @@
-### DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping
+## DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping
 This repository contains the implementation of our paper **DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping**. 
 
 The codes of our shape completion method are mainly in `DiffGrasp/Completion/diff_models`.
