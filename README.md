@@ -5,6 +5,7 @@ The codes of our shape completion method are mainly in `DiffGrasp/Completion/dif
 
 The codes of robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff_.py` and `DiffGrasp/main_gpd_diff_gazebo.py`
 
+---
 
 ## Environment setup
 **Commands for creating an environment and further setup**:
@@ -23,7 +24,7 @@ The codes of robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff
 	pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
 ```
 
-
+---
 
 ## Full Pipeline for Kinova Gen3 Grasping in Real World
 
@@ -56,25 +57,7 @@ The codes of robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff
     source catkin_workspace/devel/setup.bash
     roslaunch kortex_examples reach_approach_grasp_pose.launch
     ```
-
----
-
-## Training and Evaluation for Baselines 
-
-1. **Training**:
-    ```bash
-    conda activate diffgrasp
-    cd Downloads/DiffGrasp/Completion
-    python3 main.py --config ./cfgs/YCB_models/<baseline>.yaml
-    ```
-
-2. **Evaluation**:
-    ```bash
-    conda activate diffgrasp
-    cd Downloads/DiffGrasp/Completion
-    python3 main.py --test --ckpts default_model.pth --config ./cfgs/YCB_models/<baseline>.yaml
-    ```
-
+    
 ---
 
 ## Grasp Poses from GPD
@@ -84,8 +67,9 @@ cd Downloads/DiffGrasp/gpd/build
 ./detect_grasps ../cfg/eigen_params.cfg /home/haoming/Downloads/DiffGrasp/tmp_data/complete_pc.pcd
 ```
 
+---
 
-## Gazebo Setup
+## Robotic Grasping in Gazebo
 
 To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow these steps:
 
@@ -111,14 +95,33 @@ To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow the
     roslaunch kortex_examples reach_approach_grasp_pose.launch
     ```
 
-## Train and Evaluate the Diffusion Model on the YCB and ShapeNet Dataset
+---
+
+## Training and Evaluation for Baselines 
+
+1. **Training**:
+    ```bash
+    conda activate diffgrasp
+    cd Downloads/DiffGrasp/Completion
+    python3 main.py --config ./cfgs/YCB_models/<baseline>.yaml
+    ```
+
+2. **Evaluation**:
+    ```bash
+    conda activate diffgrasp
+    cd Downloads/DiffGrasp/Completion
+    python3 main.py --test --ckpts default_model.pth --config ./cfgs/YCB_models/<baseline>.yaml
+    ```
+
+## Train and Evaluation for Our Method
 1. **Train the diffusion model**:
 ```bash
 python3 /Completion/diff_models/main_diffusion3xc_all.py
 ```
 
-2. **Mesh Generation using the diffusion model**
+2. **Mesh Generation**
 ```bash
 python3 /Completion/diff_models/main_mesh_generation.py
 ```
 
+---
