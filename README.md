@@ -46,7 +46,7 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
 
 ---
 
-## Inplementation of Real-World Grasping using Kinova Gen3 
+## Inplementation of Real-world Grasping using Kinova Gen3 
 
 1. **Kortex Driver**:
     ```bash
