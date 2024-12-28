@@ -99,6 +99,10 @@ To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow the
 
 ## Training and Evaluation for Baselines 
 
+**Dataset**
+The YCB dataset and ShapeNet can be downloaded here: [YCB (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link)
+, [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link)
+
 1. **Training**:
     ```bash
     conda activate diffgrasp
