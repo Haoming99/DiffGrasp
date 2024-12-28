@@ -57,20 +57,20 @@ The methods of our paper are mainly implemented in DiffGrasp/Completion/diff_mod
 
 ---
 
-## Training and Testing Process for Point Cloud Completion
+## Training and Evaluation for Baselines 
 
 1. **Training**:
     ```bash
     conda activate diffgrasp
     cd Downloads/DiffGrasp/Completion
-    python3 main.py --config ./cfgs/YCB_models/SGrasp.yaml
+    python3 main.py --config ./cfgs/YCB_models/<baseline>.yaml
     ```
 
-2. **Testing**:
+2. **Evaluation**:
     ```bash
     conda activate diffgrasp
     cd Downloads/DiffGrasp/Completion
-    python3 main.py --test --ckpts default_model.pth --config ./cfgs/YCB_models/SGrasp.yaml
+    python3 main.py --test --ckpts default_model.pth --config ./cfgs/YCB_models/<baseline>.yaml
     ```
 
 ---
