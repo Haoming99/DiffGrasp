@@ -1,4 +1,8 @@
 # DiffGrasp Manual
+This repository contains the implementation of our paper DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping. Our code is based on the baseline algorithm DeFRCN.
+
+The methods of our paper are mainly implemented in DiffGrasp/Completion/diff_models.
+
 
 ## Environment setup
 **Commands for creating an environment and further setup**:
