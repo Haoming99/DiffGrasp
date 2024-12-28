@@ -80,7 +80,7 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
     
 ---
 
-## Grasp Poses from GPD
+## (Optional) Independent Grasp Pose Generation
 ```bash
 conda activate diffgrasp
 cd Downloads/DiffGrasp/gpd/build
