@@ -114,11 +114,11 @@ To set up and execute the Gazebo simulation for Kinova Gen3 grasping, follow the
 ## Train and Evaluate the Diffusion Model on the YCB and ShapeNet Dataset
 1. **Train the diffusion model**:
 ```bash
-     python3 /Completion/diff_models/main_diffusion3xc_all.py
+python3 /Completion/diff_models/main_diffusion3xc_all.py
 ```
 
 2. **Mesh Generation using the diffusion model**
 ```bash
-     python3 /Completion/diff_models/main_mesh_generation.py
+python3 /Completion/diff_models/main_mesh_generation.py
 ```
 
