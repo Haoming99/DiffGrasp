@@ -1,8 +1,9 @@
 # DiffGrasp Manual
 This repository contains the implementation of our paper DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping. 
 
-The shape completion methods of our paper are mainly implemented in DiffGrasp/Completion/diff_models.
-The real world grasping experiment of our paper are mainly implemented in DiffGrasp/main_gpd_diff_.py and DiffGrasp/main_gpd_diff_gazebo. 
+The codes of our shape completion method are mainly in DiffGrasp/Completion/diff_models.
+
+The codes of robotic grasping experiments are mainly in DiffGrasp/main_gpd_diff_.py and DiffGrasp/main_gpd_diff_gazebo.py
 
 
 ## Environment setup
