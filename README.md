@@ -79,10 +79,9 @@ Open four separate terminals and enter the commands below. The partial, complete
     source catkin_workspace/devel/setup.bash
     roslaunch kortex_examples reach_approach_grasp_pose.launch
     ```
-    
----
 
-## (Optional) Independent Grasp Pose Generation
+
+**(Optional) Independent Grasp Pose Generation**
 ```bash
 conda activate diffgrasp
 cd Downloads/DiffGrasp/gpd/build
