@@ -8,9 +8,10 @@ The codes of our robotic grasping experiments are mainly in `DiffGrasp/main_gpd_
 Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](https://github.com/yuxumin/PoinTr/tree/master), [PoinTr](https://github.com/yuxumin/PoinTr/tree/master), [3DSGrasp](https://github.com/NunoDuarte/3DSGrasp), [EINet](https://github.com/corecai163/EINet). Datasets can be downloaded here: [YCB (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link)
 , [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link). Checkpoints can be downloaded here: [Checkpoints (Google Drive)](https://drive.google.com/file/d/1teSRmxWky_ZV2D6WUoRWabS1b42HKjou/view?usp=drive_link)
 
-
-![Pipeline](teaser.png) ![Grasping](demo.gif)
-
+<p align="center">
+  <img src="teaser.png" alt="Image 1" width="300"/>
+  <img src="demo.gif" alt="Image 2" width="300"/>
+</p>
 
 
 ---
