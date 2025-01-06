@@ -159,4 +159,6 @@ python3 /Completion/diff_models/main_diffusion3xc_all.py
 python3 /Completion/diff_models/main_mesh_generation.py
 ```
 
+![Example Image](multimodal.png)
+
 ---
