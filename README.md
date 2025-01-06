@@ -10,7 +10,7 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
 
 <p align="center">
   <img src="teaser.png" alt="Image 1" width="500"/>
-  <img src="demo.gif" alt="Image 2" width="500"/>
+  <img src="demo.gif" alt="Image 2" width="400"/>
 </p>
 
 
