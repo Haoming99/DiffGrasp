@@ -15,11 +15,11 @@ import signal
 import matplotlib.pyplot as plt
 
 import torch
-from Completion.Wen.models.conv_decoder import LocalDecoderAttn
-from Completion.Wen.models.local_encoder import LocalPoolPointnet
-from Completion.Wen.models.diff_cli import UNet2DModelCLI, AutoencoderKLCLI
+from Completion.diff_models.models.conv_decoder import LocalDecoderAttn
+from Completion.diff_models.models.local_encoder import LocalPoolPointnet
+from Completion.diff_models.models.diff_cli import UNet2DModelCLI, AutoencoderKLCLI
 from diffusers import PNDMScheduler
-from Completion.Wen.models.diffusion3x_c_torch import Diffusion3XC
+from Completion.diff_models.models.diffusion3x_c_torch import Diffusion3XC
 
 
 
@@ -325,7 +325,7 @@ pts_partial = pts_partial.to(device)
 pts_partial = pts_partial.reshape(1, 2048, 3)
 
 
-checkpoint = torch.load('/home/haoming/Downloads/3DSGrasp-master/Completion/last.ckpt', map_location=device)
+checkpoint = torch.load('/home/haoming/Downloads/DiffGrasp/Completion/last.ckpt', map_location=device)
 state_dict = checkpoint['state_dict']
 model.load_state_dict(state_dict, strict=True)
 print("Checkpoint Loaded Successfully!")
@@ -338,7 +338,7 @@ print("Predicted Mesh")
 print(mesh_list)
 mesh = mesh_list[0][0]
 mesh.show()
-mesh.export('/home/haoming/Downloads/3DSGrasp-master/tmp_data/generated_mesh.obj')
+mesh.export('/home/haoming/Downloads/DiffGrasp/tmp_data/generated_mesh.obj')
 
 # Sample points from the mesh
 sampled_points, face_indices = mesh.sample(8192, return_index=True)
@@ -356,13 +356,13 @@ pcd_r = pcd_r + centroid
 pcdd = o3d.geometry.PointCloud()
 pcdd.points = o3d.utility.Vector3dVector(pcd_r.squeeze())
 
-o3d.io.write_point_cloud('/home/haoming/Downloads/3DSGrasp-master/tmp_data/complete_pc_vae.pcd',pcdd)
+o3d.io.write_point_cloud('/home/haoming/Downloads/DiffGrasp/tmp_data/complete_pc_vae.pcd',pcdd)
 np.savetxt('outputfile.xyz', complete_pc)
 
 
 print('Complete grasps')
-subprocess.call('./detect_grasps /home/haoming/Downloads/3DSGrasp-master/gpd/cfg/eigen_params.cfg /home/haoming/Downloads/3DSGrasp-master/tmp_data/complete_pc.pcd',
-                shell=True, cwd='/home/haoming/Downloads/3DSGrasp-master/gpd/build')
+subprocess.call('./detect_grasps /home/haoming/Downloads/DiffGrasp/gpd/cfg/eigen_params.cfg /home/haoming/Downloads/DiffGrasp/tmp_data/complete_pc.pcd',
+                shell=True, cwd='/home/haoming/Downloads/DiffGrasp/gpd/build')
 
 grasp_poses = read_grasps()
 print('Number of grasp poses: ', grasp_poses.shape[0])
