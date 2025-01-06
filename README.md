@@ -9,7 +9,7 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
 , [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link). Checkpoints can be downloaded here: [Checkpoints (Google Drive)](https://drive.google.com/file/d/1teSRmxWky_ZV2D6WUoRWabS1b42HKjou/view?usp=drive_link)
 
 
-![Pipeline](teaser.png) ![Grasping](grasping.gif)
+![Pipeline](teaser.png) ![Grasping](demo.gif)
 
 
 
