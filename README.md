@@ -9,8 +9,8 @@ Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](
 , [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link). Checkpoints can be downloaded here: [Checkpoints (Google Drive)](https://drive.google.com/file/d/1teSRmxWky_ZV2D6WUoRWabS1b42HKjou/view?usp=drive_link)
 
 <p align="center">
-  <img src="teaser.png" alt="Image 1" width="500"/>
-  <img src="demo.gif" alt="Image 2" width="300"/>
+  <img src="teaser.png" alt="Image 1" width="600"/>
+  <img src="demo.gif" alt="Image 2" width="400"/>
 </p>
 
 
