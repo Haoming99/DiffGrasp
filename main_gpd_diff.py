@@ -15,11 +15,11 @@ import signal
 import matplotlib.pyplot as plt
 
 import torch
-from Completion.Wen.models.conv_decoder import LocalDecoderAttn
-from Completion.Wen.models.local_encoder import LocalPoolPointnet
-from Completion.Wen.models.diff_cli import UNet2DModelCLI, AutoencoderKLCLI
+from Completion.diff_models.models.conv_decoder import LocalDecoderAttn
+from Completion.diff_models.models.local_encoder import LocalPoolPointnet
+from Completion.diff_models.models.diff_cli import UNet2DModelCLI, AutoencoderKLCLI
 from diffusers import PNDMScheduler
-from Completion.Wen.models.diffusion3x_c_torch import Diffusion3XC
+from Completion.diff_models.models.diffusion3x_c_torch import Diffusion3XC
 #from Completion.Wen.utils.onet_evaluator import MeshEvaluator
 import sys
 
@@ -175,7 +175,7 @@ rospy.init_node('listener', anonymous=True)
 signal.signal(signal.SIGINT, handler)  # catch ctrl+c
 point_cloud = rospy.wait_for_message("/camera/depth_registered/points", PointCloud2)
 
-tmp_dir = '/home/haoming/Downloads/3DSGrasp-master/tmp_data/'
+tmp_dir = '/home/haoming/Downloads/DiffGrasp/tmp_data/'
 
 pc = []
 for p in pc2.read_points(point_cloud, field_names=("x", "y", "z"), skip_nans=True):
@@ -307,12 +307,12 @@ model = Diffusion3XC(
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)
 
-checkpoint = torch.load('/home/haoming/Downloads/3DSGrasp-master/Completion/DiffGPD.ckpt', map_location=device)
+checkpoint = torch.load('/home/haoming/Downloads/DiffGrasp/Completion/DiffGPD.ckpt', map_location=device)
 state_dict = checkpoint['state_dict']
 model.load_state_dict(state_dict, strict=True)
 print("Checkpoint Loaded Successfully!")
 
-partial_ = o3d.io.read_point_cloud('/home/haoming/Downloads/3DSGrasp-master/tmp_data/partial_pc.pcd')
+partial_ = o3d.io.read_point_cloud('/home/haoming/Downloads/DiffGrasp/tmp_data/partial_pc.pcd')
 
 pts_partial = np.asarray(partial_.points)
 pts_partial = farthest_point_sample(pts_partial,2048)
@@ -376,7 +376,7 @@ red_color = np.array([[0, 0, 1] for _ in range(len(pcdd.points))])  # RGB: Red
 # Assign the color to the point cloud
 pcdd.colors = o3d.utility.Vector3dVector(red_color)
 
-o3d.io.write_point_cloud('/home/haoming/Downloads/3DSGrasp-master/tmp_data/complete_pc_vae.pcd',pcdd)
+o3d.io.write_point_cloud('/home/haoming/Downloads/DiffGrasp/tmp_data/complete_pc_vae.pcd',pcdd)
 np.savetxt('outputfile.xyz', complete_pc)
 
 
@@ -389,8 +389,8 @@ o3d.visualization.draw_geometries([pcd, outlier_cloud])
 
 
 print('Complete grasps')
-subprocess.call('./detect_grasps /home/haoming/Downloads/3DSGrasp-master/gpd/cfg/eigen_params.cfg /home/haoming/Downloads/3DSGrasp-master/tmp_data/complete_pc_vae.pcd',
-                shell=True, cwd='/home/haoming/Downloads/3DSGrasp-master/gpd/build')
+subprocess.call('./detect_grasps /home/haoming/Downloads/DiffGrasp/gpd/cfg/eigen_params.cfg /home/haoming/Downloads/DiffGrasp/tmp_data/complete_pc_vae.pcd',
+                shell=True, cwd='/home/haoming/Downloads/DiffGrasp/gpd/build')
 
 grasp_poses = read_grasps()
 print('Number of grasp poses: ', grasp_poses.shape[0])
