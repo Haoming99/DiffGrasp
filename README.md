@@ -1,15 +1,17 @@
 # DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping
 This repository contains the implementation of our paper **DiffGrasp: Diffusion-based 3D Shape Completion for Robotic Grasping**. The codes of our shape completion method are mainly in `DiffGrasp/Completion/diff_models`. The codes of our robotic grasping experiments are mainly in `DiffGrasp/main_gpd_diff_.py` and `DiffGrasp/main_gpd_diff_gazebo.py`
 
-We introduce a novel diffusion-based robotic grasping method that recovers the complete 3D geometry of an object from a single-view partial point cloud and map it to a robust 6-DoF grasp pose. In the real world, prior knowledge of the complete 3D shape of the target object is not desirable, which limits the accuracy of grasping. To address the issue, our method compresses 3D shapes into a low-dimensional latent space and takes the shape completion as a reverse diffusion process conditioned on the partial point cloud in the latent space to produce high fidelity and diverse plausible shapes. At runtime, our approach takes a single view depth image as input and generates the complete shape of the object. Given the complete shape, an arbitrary number of points can be sampled and used by Grasp Pose Detection (GPD) to generate accurate grasp poses. Our method outperforms state-of-the-art methods in terms of both shape completion performance and real robot grasping accuracy. The grasping strategy with our completion network shows a significant improvement with regard to grasp success rate over methods with other completion methods in real world experiments. 
-
-Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](https://github.com/yuxumin/PoinTr/tree/master), [PoinTr](https://github.com/yuxumin/PoinTr/tree/master), [3DSGrasp](https://github.com/NunoDuarte/3DSGrasp), [EINet](https://github.com/corecai163/EINet). Datasets can be downloaded here: [YCB (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link)
-, [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link). Checkpoints can be downloaded here: [Checkpoints (Google Drive)](https://drive.google.com/file/d/1teSRmxWky_ZV2D6WUoRWabS1b42HKjou/view?usp=drive_link)
-
 <p align="center">
   <img src="teaser.png" alt="Image 1" width="500"/>
   <img src="demo.gif" alt="Image 2" width="300"/>
 </p>
+
+We introduce a novel diffusion-based robotic grasping method that recovers the complete 3D geometry of an object from a single-view partial point cloud and map it to a robust 6-DoF grasp pose. In the real world, prior knowledge of the complete 3D shape of the target object is not desirable, which limits the accuracy of grasping. To address the issue, our method compresses 3D shapes into a low-dimensional latent space and takes the shape completion as a reverse diffusion process conditioned on the partial point cloud in the latent space to produce high fidelity and diverse plausible shapes. At runtime, our approach takes a single view depth image as input and generates the complete shape of the object. Given the complete shape, an arbitrary number of points can be sampled and used by Grasp Pose Detection (GPD) to generate accurate grasp poses. Our method outperforms state-of-the-art methods in terms of both shape completion performance and real robot grasping accuracy. The grasping strategy with our completion network shows a significant improvement with regard to grasp success rate over methods with other completion methods in real world experiments. 
+
+<img src="net_work.png" alt="DiffGrasp" width="400"/>
+
+Baseline codes are from [PCN](https://github.com/qinglew/PCN-PyTorch), [TopNet](https://github.com/yuxumin/PoinTr/tree/master), [PoinTr](https://github.com/yuxumin/PoinTr/tree/master), [3DSGrasp](https://github.com/NunoDuarte/3DSGrasp), [EINet](https://github.com/corecai163/EINet). Datasets can be downloaded here: [YCB (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link)
+, [ShapeNet (Google Drive)](https://drive.google.com/file/d/1jFL5fVTjUhlfNtkPHetgpkTvN14Cgf_1/view?usp=drive_link). Checkpoints can be downloaded here: [Checkpoints (Google Drive)](https://drive.google.com/file/d/1teSRmxWky_ZV2D6WUoRWabS1b42HKjou/view?usp=drive_link)
 
 
 ---
